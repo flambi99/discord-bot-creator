@@ -26,8 +26,8 @@ jobs:
       # run tests!
       - run: npm run test
 
-      - run: npm run build:win
-
       - run: npm run build:linux
+
+      - run: npm run build:win
 
       - run: npm run postinstall
