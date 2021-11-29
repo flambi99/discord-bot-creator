@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="mt-4 container"
+>
+  <div
+    className="align-items-stretch row"
+  >
+    <form
+      className=""
+    >
+      <button
+        className="mx-3 mt-3 btn btn-primary"
+        data-testid="create-bot"
+        disabled={false}
+        onClick={[Function]}
+        type="submit"
+      >
+        Create new bot
+      </button>
+      <button
+        className="mt-3 btn btn-primary"
+        data-testid="add-bot"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Bot
+      </button>
+    </form>
+  </div>
+</div>
+`;

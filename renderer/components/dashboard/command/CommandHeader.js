@@ -1,6 +1,7 @@
 import { Col, Form, Row } from "react-bootstrap";
 import { useDashboardContext } from "../DashboardContext";
 import HandlerNameInput from "../handlers/HandlerNameInput";
+import React from 'react'
 
 export default function DashboardWindowHeader() {
   const { handler: command, updateHandler } = useDashboardContext();
@@ -22,17 +23,17 @@ export default function DashboardWindowHeader() {
       <Col sm="8" className="mx-2 command-form">
         <Row>
           <Col className="mb-3">
-            <HandlerNameInput/>
+            <HandlerNameInput data-testid="handler"/>
           </Col>
         </Row>
-        <Form>
+        <Form data-testid="form-test">
           <Form.Group className="mb-3">
-            <Form.Label>Command Type</Form.Label>
-            <Form.Select value={command.comType} onChange={onChangeComType}>
-              <option value="0">Normal Command</option>
-              <option value="1">Includes Word</option>
-              <option value="2">Matches Regular Expression</option>
-              <option value="3">Any Message</option>
+            <Form.Label data-testid="label-name">Command Type</Form.Label>
+            <Form.Select value={command.comType} onChange={onChangeComType} data-testid="form-select">
+              <option value="0" data-testid="select-option">Normal Command</option>
+              <option value="1" data-testid="select-option">Includes Word</option>
+              <option value="2" data-testid="select-option">Matches Regular Expression</option>
+              <option value="3" data-testid="select-option">Any Message</option>
             </Form.Select>
           </Form.Group>
           <Form.Group className="mb-3">

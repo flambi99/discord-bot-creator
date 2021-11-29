@@ -19,6 +19,7 @@ export default function ColorField({ value }) {
         value={value}
         onChange={onChange}
         className="p-0 border-none"
+        data-testid="input-test"
       />
     </FormGroup>
   );

@@ -15,6 +15,7 @@ export default function HandlerNameInput(props) {
         value={handler.name}
         onChange={update}
         onBlur={update}
+        data-testid="inputField"
       />
     </FloatingLabel>
   );
