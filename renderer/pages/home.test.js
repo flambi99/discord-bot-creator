@@ -1,4 +1,4 @@
-import { render, fireEvent, screen } from 'test-utils';
+import { render, fireEvent, screen } from '../../test_setup/test-utils';
 import React from 'react'
 import Dashboard from './home'
 import renderer from "react-test-renderer"
