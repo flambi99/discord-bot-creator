@@ -9,7 +9,7 @@ jest.mock('react-bootstrap', () => ({
 }))
 
 
-it("test", () => {
+it("input field test", () => {
     const {container, getByTestId, } = render(
         <DashboardProvider>
             <HandlerNameInput/>

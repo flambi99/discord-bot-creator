@@ -31,7 +31,7 @@ export default function Sidebar({ selected }) {
                     <Nav.Link
                       eventKey={"nav-link-" + d?.name + "-" + i}
                       active={handlerIndex === i}
-                      onClick={() => updateHandlerIndex(i)}
+                      onClick={updateHandlerIndex(i)}
                       className="d-flex flex-row justify-content-between align-items-center mb-2 cursor-pointer"
                       style={{ cursor: "pointer" }}
                     >
@@ -52,12 +52,12 @@ export default function Sidebar({ selected }) {
                 <Form.Select
                   id="command"
                   value={selected}
-                  onChange={(e) => updateHandlerIndex(e.target.value)}
+                  onChange={updateHandlerIndex(e.target.value)}
                 >
                   {commands?.concat(events || []).map((c, i) => (
                     <option
                       key={"select-" + c?.name + "-" + i}
-                      onClick={() => updateHandlerIndex(i)}
+                      onClick={updateHandlerIndex(i)}
                       value={i}
                     >
                       {c?.name}

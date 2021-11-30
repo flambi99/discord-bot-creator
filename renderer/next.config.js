@@ -15,4 +15,5 @@ module.exports = removeImports({
   },
   reactStrictMode: false,
   experimental: { esmExternals: true },
+  future: { webpack5: true }
 });

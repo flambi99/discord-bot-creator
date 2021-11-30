@@ -18,7 +18,7 @@ function Editor({ value }) {
         value={value}
         language="js"
         placeholder="Please enter JS code."
-        onChange={(e) => updateField("code", e.target.value)}
+        onChange={updateField("code", e.target.value)}
         padding={15}
         style={{
           fontSize: 16,

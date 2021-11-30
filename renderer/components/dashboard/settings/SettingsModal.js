@@ -89,8 +89,7 @@ export default function SettingsModal(props) {
             type="switch"
             label="Run Bot on Save"
             checked={!!settings?.autoRestart}
-            onChange={(e) =>
-              setSettings({ ...settings, autoRestart: e.target.checked })
+            onChange={setSettings({ ...settings, autoRestart: e.target.checked })
             }
             className="mb-3"
           />
@@ -98,8 +97,7 @@ export default function SettingsModal(props) {
             type="switch"
             label="Case Sensitive"
             checked={settings?.checked === "true" || false}
-            onChange={(e) =>
-              setSettings({
+            onChange={setSettings({
                 ...settings,
                 settings: e.target.checked ? "true" : "false",
               })
@@ -110,8 +108,7 @@ export default function SettingsModal(props) {
             type="switch"
             label="Toggle Hints"
             checked={settings?.toggleHints !== false}
-            onChange={(e) =>
-              setSettings({ ...settings, toggleHints: e.target.checked })
+            onChange={setSettings({ ...settings, toggleHints: e.target.checked })
             }
             className="mb-3"
           />

@@ -12,7 +12,8 @@
     "build:linux": "nextron build -l",
     "build:all": "nextron build --all",
     "postinstall": "electron-builder install-app-deps",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "npm test -- --env=jsdom --coverage"
   },
   "dependencies": {
     "@babel/plugin-transform-regenerator": "^7.16.0",

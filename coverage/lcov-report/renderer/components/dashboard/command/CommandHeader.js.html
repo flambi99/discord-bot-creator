@@ -1,0 +1,374 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for renderer/components/dashboard/command/CommandHeader.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">renderer/components/dashboard/command</a> CommandHeader.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">75% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>6/8</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">50% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>2/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">75% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/8</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Col, Form, Row } from "react-bootstrap";
+import { useDashboardContext } from "../DashboardContext";
+import HandlerNameInput from "../handlers/HandlerNameInput";
+import React from 'react'
+&nbsp;
+export default function DashboardWindowHeader() {
+  const { handler: command, updateHandler } = useDashboardContext();
+&nbsp;
+  const onChangeComType = (e) =&gt; {
+    updateHandler({ comType: e.target.value });
+  };
+&nbsp;
+  const onChangeRestriction = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >    updateHandler({ restriction: e.target.value });</span>
+  };
+&nbsp;
+  const onChangePermissions = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >    updateHandler({ permissions: e.target.value });</span>
+  };
+&nbsp;
+  return (
+    &lt;Row&gt;
+      &lt;Col sm="8" className="mx-2 command-form"&gt;
+        &lt;Row&gt;
+          &lt;Col className="mb-3"&gt;
+            &lt;HandlerNameInput data-testid="handler"/&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Form data-testid="form-test"&gt;
+          &lt;Form.Group className="mb-3"&gt;
+            &lt;Form.Label data-testid="label-name"&gt;Command Type&lt;/Form.Label&gt;
+            &lt;Form.Select value={command.comType} onChange={onChangeComType} data-testid="form-select"&gt;
+              &lt;option value="0" data-testid="select-option"&gt;Normal Command&lt;/option&gt;
+              &lt;option value="1" data-testid="select-option"&gt;Includes Word&lt;/option&gt;
+              &lt;option value="2" data-testid="select-option"&gt;Matches Regular Expression&lt;/option&gt;
+              &lt;option value="3" data-testid="select-option"&gt;Any Message&lt;/option&gt;
+            &lt;/Form.Select&gt;
+          &lt;/Form.Group&gt;
+          &lt;Form.Group className="mb-3"&gt;
+            &lt;Form.Label&gt;Command Restriction&lt;/Form.Label&gt;
+            &lt;Form.Select
+              value={command.restriction}
+              onChange={onChangeRestriction}
+            &gt;
+              &lt;option value="0"&gt;None&lt;/option&gt;
+              &lt;option value="1"&gt;Server Only&lt;/option&gt;
+              &lt;option value="2"&gt;Owner Only&lt;/option&gt;
+              &lt;option value="3"&gt;DMs Only&lt;/option&gt;
+            &lt;/Form.Select&gt;
+          &lt;/Form.Group&gt;
+          &lt;Form.Group className="mb-3"&gt;
+            &lt;Form.Label&gt;Permissions&lt;/Form.Label&gt;
+            &lt;Form.Select
+              value={command.permissions}
+              onChange={onChangePermissions}
+              defaultValue="NONE"
+            &gt;
+              &lt;option value="NONE"&gt;None&lt;/option&gt;
+              &lt;option value="ADMINISTRATOR"&gt;Administrator&lt;/option&gt;
+              &lt;option value="CREATE_INSTANT_INVITE"&gt;
+                Create Instant Invite
+              &lt;/option&gt;
+              &lt;option value="KICK_MEMBERS"&gt;Kick Members&lt;/option&gt;
+              &lt;option value="BAN_MEMBERS"&gt;Ban Members&lt;/option&gt;
+              &lt;option value="MANAGE_CHANNELS"&gt;Manage Channels&lt;/option&gt;
+              &lt;option value="MANAGE_GUILD"&gt;Manage Guild&lt;/option&gt;
+              &lt;option value="ADD_REACTIONS"&gt;Add Reactions&lt;/option&gt;
+              &lt;option value="VIEW_AUDIT_LOG"&gt;View Audit Log&lt;/option&gt;
+              &lt;option value="PRIORITY_SPEAKER"&gt;Priority Speaker&lt;/option&gt;
+              &lt;option value="STREAM"&gt;Stream&lt;/option&gt;
+              &lt;option value="VIEW_CHANNEL"&gt;View Channel&lt;/option&gt;
+              &lt;option value="SEND_MESSAGES"&gt;Send Messages&lt;/option&gt;
+              &lt;option value="SEND_TTS_MESSAGES"&gt;Send TTS Messages&lt;/option&gt;
+              &lt;option value="MANAGE_MESSAGES"&gt;Manage Messages&lt;/option&gt;
+              &lt;option value="EMBED_LINKS"&gt;Embed Links&lt;/option&gt;
+              &lt;option value="ATTACH_FILES"&gt;Attach Files&lt;/option&gt;
+              &lt;option value="READ_MESSAGE_HISTORY"&gt;Read Message History&lt;/option&gt;
+              &lt;option value="MENTION_EVERYONE"&gt;Mention Everyone&lt;/option&gt;
+              &lt;option value="USE_EXTERNAL_EMOJIS"&gt;Use External Emojis&lt;/option&gt;
+              &lt;option value="VIEW_GUILD_INSIGHTS"&gt;View Guild Insights&lt;/option&gt;
+              &lt;option value="CONNECT"&gt;Connect&lt;/option&gt;
+              &lt;option value="SPEAK"&gt;Speak&lt;/option&gt;
+              &lt;option value="MUTE_MEMBERS"&gt;Mute Members&lt;/option&gt;
+              &lt;option value="DEAFEN_MEMBERS"&gt;Deafen Members&lt;/option&gt;
+              &lt;option value="MOVE_MEMBERS"&gt;Move Members&lt;/option&gt;
+              &lt;option value="USE_VAD"&gt;Use VAD&lt;/option&gt;
+              &lt;option value="CHANGE_NICKNAME"&gt;Change Nickname&lt;/option&gt;
+              &lt;option value="MANAGE_NICKNAMES"&gt;Manage Nicknames&lt;/option&gt;
+              &lt;option value="MANAGE_ROLES"&gt;Manage Roles&lt;/option&gt;
+              &lt;option value="MANAGE_WEBHOOKS"&gt;Manage Webhooks&lt;/option&gt;
+              &lt;option value="MANAGE_EMOJIS"&gt;Manage Emojis&lt;/option&gt;
+            &lt;/Form.Select&gt;
+          &lt;/Form.Group&gt;
+        &lt;/Form&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+  );
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue Nov 30 2021 02:28:50 GMT+0100 (stredoeurópsky štandardný čas)
+            </div>
+        </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

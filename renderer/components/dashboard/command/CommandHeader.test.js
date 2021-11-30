@@ -67,17 +67,6 @@ it("dropdown renders correctly", () => {
     expect(dropDown).toBeTruthy()
 })
 
-it("dropdown renders correctly", () => {
-    const { queryByTestId } = render(
-        <DashboardProvider>
-            <DashboardWindowHeader/>
-        </DashboardProvider>
-    )
-
-    const dropDown = queryByTestId("form-select")
-
-    expect(dropDown).toBeTruthy()
-})
 
 it("dropdown renders with correct option selected", () => {
     const { getAllByTestId } = render(
@@ -130,15 +119,3 @@ it("dropdown change test", () => {
     expect(options[2].selected).toBeFalsy()
     expect(options[3].selected).toBeTruthy()
 });
-
-/* , () => () => <div class="form-floating"><input data-testid="inputField" type="text" id="floatingInputGrid" class="form-control" value=""/><label for="floatingInputGrid">Name</label></div> */
-
-it("test", async () => {
-    const { container, getByText, getByTestId, queryByTestId } = render(
-        <DashboardProvider children={jest.fn()}>
-            <DashboardWindowHeader/>
-        </DashboardProvider>
-    )
-
-    console.log(container.outerHTML)
-})

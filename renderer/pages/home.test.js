@@ -4,7 +4,7 @@ import Dashboard from './home'
 import renderer from "react-test-renderer"
 
 
-it("check button render", () => {
+it("buttonRendersCorrectly", () => {
     const { queryByTestId } = render(<Dashboard/>)
 
     const createBotBtn = queryByTestId("create-bot")
@@ -14,7 +14,7 @@ it("check button render", () => {
     expect(addBotBtn).toBeTruthy()
 })
 
-it("buttons with correct name", () => {
+it("button renders with correct name", () => {
     const { queryByTestId } = render(<Dashboard/>)
 
     const createBotBtn = queryByTestId("create-bot")
@@ -24,7 +24,7 @@ it("buttons with correct name", () => {
     expect(addBotBtn.textContent).toBe("Add Bot")
 })
 
-it("matches snapshot", () => {
+it("snapshot match test", () => {
     const tree = renderer.create(<Dashboard/>).toJSON()
 
     expect(tree).toMatchSnapshot()
